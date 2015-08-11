@@ -178,7 +178,9 @@ PRODUCT_PACKAGES += \
     libOmxVdec \
     libOmxVenc \
     libstagefrighthw \
-    qcmediaplayer
+    libqcmediaplayer \
+    qcmediaplayer \
+    libextmedia_jni
 
 PRODUCT_BOOT_JARS += \
     qcmediaplayer
