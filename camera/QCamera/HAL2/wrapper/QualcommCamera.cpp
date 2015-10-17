@@ -52,47 +52,47 @@ extern "C" {
  */
 
 static hw_module_methods_t camera_module_methods = {
-    open: camera_device_open,
+    .open = camera_device_open,
 };
 
 static hw_module_t camera_common  = {
-    tag: HARDWARE_MODULE_TAG,
-    module_api_version: CAMERA_MODULE_API_VERSION_2_0,
-    hal_api_version: HARDWARE_HAL_API_VERSION,
-    id: CAMERA_HARDWARE_MODULE_ID,
-    name: "Qcamera",
-    author:"Qcom",
-    methods: &camera_module_methods,
-    dso: NULL,
-    reserved:  {0},
+    .tag = HARDWARE_MODULE_TAG,
+    .module_api_version = CAMERA_MODULE_API_VERSION_2_0,
+    .hal_api_version = HARDWARE_HAL_API_VERSION,
+    .id = CAMERA_HARDWARE_MODULE_ID,
+    .name = "Qcamera",
+    .author = "Qcom",
+    .methods = &camera_module_methods,
+    .dso = NULL,
+    .reserved = {0},
 };
 
 camera_module_t HAL_MODULE_INFO_SYM = {
-    common: camera_common,
-    get_number_of_cameras: get_number_of_cameras,
-    get_camera_info: get_camera_info,
+    .common = camera_common,
+    .get_number_of_cameras = get_number_of_cameras,
+    .get_camera_info = get_camera_info,
 };
 
 camera2_device_ops_t camera_ops = {
-    set_request_queue_src_ops:           android::set_request_queue_src_ops,
-    notify_request_queue_not_empty:      android::notify_request_queue_not_empty,
-    set_frame_queue_dst_ops:             android::set_frame_queue_dst_ops,
-    get_in_progress_count:               android::get_in_progress_count,
-    flush_captures_in_progress:          android::flush_captures_in_progress,
-    construct_default_request:           android::construct_default_request,
+    .set_request_queue_src_ops =           android::set_request_queue_src_ops,
+    .notify_request_queue_not_empty =      android::notify_request_queue_not_empty,
+    .set_frame_queue_dst_ops =             android::set_frame_queue_dst_ops,
+    .get_in_progress_count =               android::get_in_progress_count,
+    .flush_captures_in_progress =          android::flush_captures_in_progress,
+    .construct_default_request =           android::construct_default_request,
 
-    allocate_stream:                     android::allocate_stream,
-    register_stream_buffers:             android::register_stream_buffers,
-    release_stream:                      android::release_stream,
+    .allocate_stream =                     android::allocate_stream,
+    .register_stream_buffers =             android::register_stream_buffers,
+    .release_stream =                      android::release_stream,
 
-    allocate_reprocess_stream:           android::allocate_reprocess_stream,
-    allocate_reprocess_stream_from_stream: android::allocate_reprocess_stream_from_stream,
-    release_reprocess_stream:            android::release_reprocess_stream,
+    .allocate_reprocess_stream =           android::allocate_reprocess_stream,
+    .allocate_reprocess_stream_from_stream = android::allocate_reprocess_stream_from_stream,
+    .release_reprocess_stream =            android::release_reprocess_stream,
 
-    trigger_action:                      android::trigger_action,
-    set_notify_callback:                 android::set_notify_callback,
-    get_metadata_vendor_tag_ops:         android::get_metadata_vendor_tag_ops,
-    dump:                                android::dump,
+    .trigger_action =                      android::trigger_action,
+    .set_notify_callback =                 android::set_notify_callback,
+    .get_metadata_vendor_tag_ops =         android::get_metadata_vendor_tag_ops,
+    .dump =                                android::dump,
 };
 
 namespace android {

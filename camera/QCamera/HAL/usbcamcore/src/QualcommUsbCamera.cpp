@@ -54,35 +54,35 @@ extern "C" {
 }
 
 camera_device_ops_t usbcam_camera_ops = {
-  set_preview_window:         android::usbcam_set_preview_window,
-  set_callbacks:              android::usbcam_set_CallBacks,
-  enable_msg_type:            android::usbcam_enable_msg_type,
-  disable_msg_type:           android::usbcam_disable_msg_type,
-  msg_type_enabled:           android::usbcam_msg_type_enabled,
+  .set_preview_window =         android::usbcam_set_preview_window,
+  .set_callbacks =              android::usbcam_set_CallBacks,
+  .enable_msg_type =            android::usbcam_enable_msg_type,
+  .disable_msg_type =           android::usbcam_disable_msg_type,
+  .msg_type_enabled =           android::usbcam_msg_type_enabled,
 
-  start_preview:              android::usbcam_start_preview,
-  stop_preview:               android::usbcam_stop_preview,
-  preview_enabled:            android::usbcam_preview_enabled,
-  store_meta_data_in_buffers: android::usbcam_store_meta_data_in_buffers,
+  .start_preview =              android::usbcam_start_preview,
+  .stop_preview =               android::usbcam_stop_preview,
+  .preview_enabled =            android::usbcam_preview_enabled,
+  .store_meta_data_in_buffers = android::usbcam_store_meta_data_in_buffers,
 
-  start_recording:            android::usbcam_start_recording,
-  stop_recording:             android::usbcam_stop_recording,
-  recording_enabled:          android::usbcam_recording_enabled,
-  release_recording_frame:    android::usbcam_release_recording_frame,
+  .start_recording =            android::usbcam_start_recording,
+  .stop_recording =             android::usbcam_stop_recording,
+  .recording_enabled =          android::usbcam_recording_enabled,
+  .release_recording_frame =    android::usbcam_release_recording_frame,
 
-  auto_focus:                 android::usbcam_auto_focus,
-  cancel_auto_focus:          android::usbcam_cancel_auto_focus,
+  .auto_focus =                 android::usbcam_auto_focus,
+  .cancel_auto_focus =          android::usbcam_cancel_auto_focus,
 
-  take_picture:               android::usbcam_take_picture,
-  cancel_picture:             android::usbcam_cancel_picture,
+  .take_picture =               android::usbcam_take_picture,
+  .cancel_picture =             android::usbcam_cancel_picture,
 
-  set_parameters:             android::usbcam_set_parameters,
-  get_parameters:             android::usbcam_get_parameters,
-  put_parameters:             android::usbcam_put_parameters,
-  send_command:               android::usbcam_send_command,
+  .set_parameters =             android::usbcam_set_parameters,
+  .get_parameters =             android::usbcam_get_parameters,
+  .put_parameters =             android::usbcam_put_parameters,
+  .send_command =               android::usbcam_send_command,
 
-  release:                    android::usbcam_release,
-  dump:                       android::usbcam_dump,
+  .release =                    android::usbcam_release,
+  .dump =                       android::usbcam_dump,
 };
 
 #define CAPTURE                 1
