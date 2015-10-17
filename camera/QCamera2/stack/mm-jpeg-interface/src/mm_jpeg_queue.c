@@ -27,7 +27,9 @@
  *
  */
 
+#include <malloc.h>
 #include <pthread.h>
+#include <string.h>
 #include "mm_jpeg_dbg.h"
 #include "mm_jpeg.h"
 
