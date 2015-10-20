@@ -16,7 +16,7 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     PRODUCT_NAME=Aquaris_M5
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    BUILD_FINGERPRINT=bq/Aquaris_M5/Aquaris_M5:5.0.2/LRX22G/1445393882:user/release-keys \
-    PRIVATE_BUILD_DESC="msm8916_32-user 5.0.2 LRX22G 400 release-keys"
+    BUILD_FINGERPRINT=bq/Aquaris_M5/Aquaris_M5:6.0/MRA58K/2256973:user/release-keys \
+    PRIVATE_BUILD_DESC="aquaris_m5-user 6.0 MRA58K 2256973 release-keys"
 
 PRODUCT_GMS_CLIENTID_BASE := android-bq
