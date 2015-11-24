@@ -383,4 +383,7 @@
          provisioning, availability etc -->
     <bool name="config_carrier_vt_available">true</bool>
     
+    <!-- Enable doze powersaving -->
+    <bool name="config_enableAutoPowerModes">true</bool>
+
 </resources>
