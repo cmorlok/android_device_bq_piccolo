@@ -66,6 +66,10 @@ on boot
     chown system camera /sys/class/leds/torch-light0/brightness
     chmod 0660 /sys/class/leds/torch-light0/brightness
 
+    # FM
+    chown system system /sys/module/radio_iris_transport/parameters/fmsmd_set
+    chmod 0660 /sys/module/radio_iris_transport/parameters/fmsmd_set
+
     # Create QMUX deamon socket area
     mkdir /dev/socket/qmux_radio 0770 radio radio
     chmod 2770 /dev/socket/qmux_radio
@@ -375,6 +379,13 @@ service msm_irqbalance /system/bin/msm_irqbalance -f /system/etc/msm_irqbalance.
     class core
     user root
     group root
+
+service fm_dl /system/bin/sh /system/etc/init.qcom.fm.sh
+    class late_start
+    user system
+    group system
+    disabled
+    oneshot
 
 service qcamerasvr /system/bin/mm-qcamera-daemon
     class main
