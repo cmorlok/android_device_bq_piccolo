@@ -36,6 +36,17 @@ PRODUCT_PACKAGES += \
     camera.msm8916 \
     libmm-qcamera
 
+# Charger
+ADDITIONAL_DEFAULT_PROPERTIES += \
+    ro.usb.id.charge=9E17 \
+    ro.usb.id.mtp=7F10 \
+    ro.usb.id.mtp_adb=7F10 \
+    ro.usb.id.ptp=7D17 \
+    ro.usb.id.ptp_adb=7D17 \
+    ro.usb.id.ums=9E06 \
+    ro.usb.id.ums_adb=9D07 \
+    ro.usb.vid=2A47
+
 # Data
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/dsi_config.xml:system/etc/data/dsi_config.xml \
@@ -112,7 +123,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Ramdisk
 PRODUCT_PACKAGES += \
-    fstab.qcom 
+    fstab.qcom \
+    init.target.rc
 
 # Thermal
 PRODUCT_COPY_FILES += \
