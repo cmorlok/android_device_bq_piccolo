@@ -42,6 +42,7 @@ TARGET_USES_64_BIT_BINDER := false
 # Compiler
 TARGET_GLOBAL_CFLAGS += -mfpu=neon -mfloat-abi=softfp
 TARGET_GLOBAL_CPPFLAGS += -mfpu=neon -mfloat-abi=softfp
+TARGET_USES_AOSP := true
 
 # Kernel
 TARGET_KERNEL_SOURCE := kernel/bq/piccolo
