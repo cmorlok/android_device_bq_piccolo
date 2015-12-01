@@ -14,8 +14,6 @@
 # limitations under the License.
 #
 
-FORCE_32_BIT := true
-
 include device/cyanogen/msm8939-common/BoardConfigCommon.mk
 
 LOCAL_PATH := device/bq/piccolo
