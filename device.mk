@@ -136,3 +136,6 @@ PRODUCT_PACKAGES += \
     
 PRODUCT_PROPERTY_OVERRIDES += \
     wifi.interface=wlan0
+
+# Inherit from msm8939-common
+$(call inherit-product, device/cyanogen/msm8939-common/msm8939.mk)
