@@ -79,6 +79,9 @@ TARGET_TAP_TO_WAKE_NODE := "/sys/devices/soc.0/78b9000.i2c/i2c-5/5-004a/en_gestu
 # Add suffix variable to uniquely identify the board
 TARGET_BOARD_SUFFIX := _32
 
+# Cpusets
+ENABLE_CPUSETS := true
+
 # Encryption
 TARGET_HW_DISK_ENCRYPTION := true
 
