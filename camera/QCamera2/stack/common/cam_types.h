@@ -31,11 +31,11 @@
 #define __QCAMERA_TYPES_H__
 
 #include <stdint.h>
+#include <stdlib.h>
+#include <string.h>
 #include <pthread.h>
 #include <inttypes.h>
 #include <media/msmb_camera.h>
-#include <string.h>
-#include <stdlib.h>
 
 #define CAM_MAX_NUM_BUFS_PER_STREAM  (24)
 #define MAX_METADATA_PAYLOAD_SIZE    (1024)
@@ -906,17 +906,6 @@ typedef struct {
     int              sensing_method;
     float            crop_factor;
 } cam_sensor_params_t;
-
-typedef enum {
-    CAM_METERING_MODE_UNKNOWN = 0,
-    CAM_METERING_MODE_AVERAGE = 1,
-    CAM_METERING_MODE_CENTER_WEIGHTED_AVERAGE = 2,
-    CAM_METERING_MODE_SPOT = 3,
-    CAM_METERING_MODE_MULTI_SPOT = 4,
-    CAM_METERING_MODE_PATTERN = 5,
-    CAM_METERING_MODE_PARTIAL = 6,
-    CAM_METERING_MODE_OTHER = 255,
-} cam_metering_mode_t;
 
 typedef struct {
     float exp_time;
