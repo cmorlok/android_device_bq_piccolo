@@ -69,9 +69,8 @@ FEATURE_QCRIL_UIM_SAP_SERVER_MODE := true
 COMMON_GLOBAL_CFLAGS += -DCAMERA_VENDOR_L_COMPAT
 
 # Charger
-BOARD_CHARGER_ENABLE_SUSPEND := true
 BOARD_CHARGER_DISABLE_INIT_BLANK := true
-BOARD_CHARGER_SHOW_PERCENTAGE := true
+BOARD_HAL_STATIC_LIBRARIES := libhealthd.msm
 
 # CMHW
 BOARD_HARDWARE_CLASS := device/bq/piccolo/cmhw/src
@@ -111,6 +110,9 @@ MAX_EGL_CACHE_KEY_SIZE := 12*1024
 # binaries. Decrease the size if RAM or Flash Storage size is a limitation
 # of the device.
 MAX_EGL_CACHE_SIZE := 2048*1024
+
+# Headers
+TARGET_SPECIFIC_HEADER_PATH := device/bq/piccolo/include
 
 # Init
 TARGET_PLATFORM_DEVICE_BASE := /devices/soc.0/

@@ -116,9 +116,8 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/gps/etc/quipc.conf:system/etc/quipc.conf \
     $(LOCAL_PATH)/gps/etc/sap.conf:system/etc/sap.conf
 
-# IO Scheduler
-PRODUCT_PROPERTY_OVERRIDES += \
-    sys.io.scheduler=bfq
+# healthd library expanded for mode charger
+PRODUCT_PACKAGES += libhealthd.msm
 
 # IRQ balance
 PRODUCT_COPY_FILES += \
