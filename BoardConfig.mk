@@ -51,6 +51,16 @@ TARGET_OTA_ASSERT_DEVICE := aquarism5,piccolo
 # ANT+
 BOARD_ANT_WIRELESS_DEVICE := "qualcomm-smd"
 
+# ART
+# Enable dex-preoptimization to speed up first boot sequence
+ifeq ($(HOST_OS),linux)
+  ifneq ($(TARGET_BUILD_VARIANT),eng)
+    ifeq ($(WITH_DEXPREOPT),)
+      WITH_DEXPREOPT := true
+    endif
+  endif
+endif
+
 # Audio
 BOARD_USES_ALSA_AUDIO := true
 AUDIO_FEATURE_ENABLED_KPI_OPTIMIZE := true
